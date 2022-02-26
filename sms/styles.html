@@ -1,0 +1,276 @@
+<html>
+<title>Macra SMS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    body {
+        /*font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;*/
+        text-align: left;
+       font-family: 'segoe UI';
+    }
+    
+    a:link {
+        color: rgb(182, 212, 212);
+        background-color: none;
+        text-decoration: none;
+    }
+    
+    #page-container {
+        position: relative;
+        min-height: 100vh;
+    }
+    
+    #content-wrap {
+        padding-bottom: 2.5rem;
+        /* Footer height */
+    }
+    
+    #footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 2.5rem;
+        /* Footer height */
+        background-color: orangered;
+        color: aqua;
+        text-align: center;
+    }
+    
+    a:active {
+        color: black;
+        background-color: none;
+    }
+    
+    a:hover {
+        color: cyan;
+        background-color: none;
+    }
+    
+    input {
+        width:20%;
+        border-radius: 5px;
+        border-color: cyan;
+        padding: 6px;
+    }
+    textarea{
+        width:50%;
+        border-radius: 5px;
+        border-color: cyan;
+        padding: 6px;
+    }
+    input:hover {
+        border-color: coral;
+        text-decoration: none;
+    }
+    .menubutton{
+        border-radius: 15px;
+        
+    }
+    select {
+        width: 20%;
+        border-radius: 5px;
+        border-color: cyan;
+        padding: 10px;
+    }
+    
+    select:hover {
+        border-color: coral;
+        text-decoration: none;
+    }
+    
+    form {
+        text-align: center;
+    }
+    #parent {
+        display: table;
+        width: 100%;
+     
+    }
+    #form_login {
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle;
+        padding-top: 10%;       
+    }
+    
+    input[type=submit] {
+        background-color: cornflowerblue;
+        color: aqua;
+        padding: 10px;
+    }
+    
+    .user {
+        background-color: coral;
+        text-align: left;
+        padding: 8px;
+        color: aqua;
+    }
+    
+    .roundimage {
+        border-radius: 60%;
+        background-color: green;
+        width: 120px;
+    }
+    
+    .heading {
+        background-color: rgb(138, 11, 11);
+        color: aqua;
+        padding: 18px;
+    }
+    
+    .subheading {
+        background-color: rgb(54, 6, 52);
+        color: aqua;
+        padding: 8px;
+    }
+    
+    .report {
+        border: 1px;
+        border-color: black;
+        border-collapse: collapse;
+        font-size: 13;
+    }
+    
+    .notifications {
+        border: 1px;
+        border-color: black;
+        border-collapse: collapse;
+    }
+    
+    a:heading {
+        color: rgb(182, 212, 212);
+    }
+    a:visited{
+        color: cyan;
+    }
+    .menu {
+        background-color: green;
+        color: aqua;
+        padding: 8px;
+        border-radius: 8px;
+    }
+    
+    .error {
+        background-color: red;
+        color: aqua;
+        font-size: 12;
+        padding: 8px;
+        border-radius: 5px;
+        width: 20%;
+    }
+    
+    .success {
+        background-color: green;
+        color: aqua;
+        font-size: 12;
+        padding: 8px;
+        border-radius: 5px;
+    }
+    
+    #thumb {
+        clear: both;
+        width: 100%;
+        margin-left: 0;
+    }
+    
+    #thumb ul {
+        width: 100%;
+    }
+    
+    #thumb ul li {
+        display: inline;
+        font-family: arial;
+        float: left;
+        padding-right: 100px;
+        width: 50%;
+        height: 400px;
+        padding-top: 40px;
+    }
+    
+    #thumb ul li img {
+        float: left;
+        width: 100%;
+        height: 200px;
+        border: #ccc solid 1px;
+        padding: 50px;
+        text-align: center;
+    }
+    
+    .orderbutton {
+        padding: 8px;
+        border-radius: 8px;
+        background-color: green;
+    }
+    .numberreport{
+        -moz-border-radius: 20px;
+    border-radius: 50%;
+    border-color:blue;
+    background-color:rgb(177, 19, 19);
+    color:black;
+    width: 150px;
+    height: 150px;
+    padding-left:15px;
+    padding-right:15px;
+    padding-top:10px;
+    padding-bottom:10px;
+    font-size:1.3em;
+
+    }
+
+    #reports {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#reports td, #reports th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#reports tr:nth-child(even){background-color: #f2f2f2;}
+
+#reports tr:hover {background-color: #ddd;}
+
+#reports th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
+    
+    @media screen and (max-width: 800px) {
+        table {
+            width: 100%;
+            text-align: center;
+        }
+        .err {
+            text-align: left;
+        }
+        .textarea {
+            width: 100%;
+            background-color: cyan;
+        }
+        input{
+            width:100%;
+            padding:15px;
+        }
+        select{
+           width: 100%;
+        }
+        #form_login{
+            padding-top: 30%;
+        }
+        .err{
+            width: 99%;
+        }
+        body{
+            text-align:left;
+        }
+        textarea{
+            width:100%;
+        }
+    }
+</style>
+
+</html>
